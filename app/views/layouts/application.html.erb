@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What?? Hulk Write Email?</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&amp;display=swap" rel="stylesheet">
+
+    <% if content_for?(:og_header) %>
+      <%= yield :og_header %>
+    <% else %>
+      <%= render "shared/default_og_header" %>
+    <% end %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <% if Rails.env.production? %>
+      <!-- Fathom - beautiful, simple website analytics -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="GMWYLPUF" defer></script>
+      <!-- / Fathom -->
+    <% end %>
+  </head>
+
+  <body class="bg-black">
+    <main class="mx-auto flex flex-col">
+      <%= yield %>
+    </main>
+  </body>
+</html>

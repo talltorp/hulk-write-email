@@ -1,0 +1,11 @@
+<h1>
+  <%= @greeting %>
+</h1>
+
+<h2>
+  What Hulk think when typing tiny keys
+</h2>
+
+<p>
+  <%= @boring_email.funny_body.to_s.gsub(/\n/, '<br/>').html_safe %>
+</p>

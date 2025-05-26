@@ -1,0 +1,106 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<div class="bg-black flex flex-col font-hand
+  text-2xl
+  sm:text-3xl
+  lg:text-4xl
+
+  [--slant-width:400px] 
+  [--hulk-width:360px]
+  [--hulk-margin:90px]
+  sm:[--slant-width:600px] 
+  sm:[--hulk-width:540px]
+  sm:[--hulk-margin:180px]
+  lg:[--slant-width:1000px]
+  lg:[--hulk-width:900px]
+  lg:[--hulk-margin:350px]
+">
+ <div class="hulk sm:pb-24">
+  <img src="/wide-shot2.png" class="animate-shake px-4">
+
+  <div class="slanted">
+    <div class="slanted-top">
+      <h2 class="px-10 pt-6 font-hand text-shadow 
+      text-4xl 
+      sm:text-6xl
+      lg:text-8xl
+      font-bold tracking-wide text-gray-900 
+      ">
+        Why Hulk write email?
+      </h2>
+
+      <p>  
+        Hulk save world. <br>
+        Hulk not need smash anymore!<br>
+        Make Hulk happy!<br>
+      </p>
+
+      <p>  
+        Now Hulk want spend quite time with <span class="font-bold">super friends</span>.<br>
+      </p>
+
+      <p>  
+        But Hulk learn... Super friends only need Hulk for smashing.<br>
+        Friends not call Hulk.
+      </p>
+
+      <p>  
+        Hulk lonely. 🥺
+      </p>
+
+      <p>  
+        Hulk remember when Hulk was Little-Hulk. <br>
+        Little-Hulk find penpals. <br>
+        Little-Hulk write letters. <br>
+        Penpals become Little-Hulks friends.<br>
+        Little-Hulk not feel lonely.<br>
+      </p>
+
+      <p>  
+        Hulk think... 
+      </p>
+
+      <p>  
+        Maybe Hulk try write email?<br>
+        Email like letter! <br>
+        
+        Hulk send email to people!<br>
+        Hulk think people want to become hulk friends!
+      </p>
+
+      <p>  
+        But..
+      </p>
+
+      <p>  
+        Hulk only know how to write <span class="font-bold underline">angry email</span>. <br>
+        People not like angry email.
+      </p>
+      <p>  
+        Hulk still lonely. 🥺
+      </p>
+
+      <p>  
+       Hulk just want to be good email friend 💚
+      </p>
+    </div>
+  </div>
+</div> 
+<div class="w-full sm:w-2/3 xl:w-1/2 mx-auto px-8 relative pb-[8rem]
+    text-white
+    sm:text-gray-900
+    [--dirty-bg-color:black]
+    sm:[--dirty-bg-color:#fd4949]
+">
+  <div class="dirty-3">
+    <div class="py-6 sm:px-12 w-full">
+      <%= render partial: "puny_humen/form", locals: {
+        puny_human: @puny_human
+      } %>
+    </div> 
+  </div> 
+</div>

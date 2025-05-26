@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: hulk_write_boring_email_development
+
+test:
+  <<: *default
+  database: hulk_write_boring_email_test
+
+production:
+  <<: *default
+  database: hulk_write_boring_email_production
+  username: hulk_write_boring_email
+  password: <%= ENV["HULK_WRITE_BORING_EMAIL_DATABASE_PASSWORD"] %>

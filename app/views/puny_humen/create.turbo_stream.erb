@@ -1,0 +1,18 @@
+<% if @puny_human.errors.present? %>
+  <%= turbo_stream.replace :new_puny_human do %>
+    <%= render partial: "puny_humen/form", locals: { puny_human: @puny_human } %>
+  <% end %>
+<% else %>
+  <%= turbo_stream.replace :new_puny_human do %>
+
+  <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold">
+    Hulk excited! 🥹
+  </h2>
+    <p>
+      You look in inbox!
+    </p>
+    <p>
+      Hulk send email to (maybe) new email friend! 💚
+    </p>
+  <% end %>
+<% end %>
