@@ -26,10 +26,10 @@ Hulk also find Ruby on Rails!
 Hulk see if similar to Hulk!
 
 Hulk know rails can lift train. Hulk can lift train!
-Rails say it "one person framework". Hulk like working alone!!
-Nerd writing Rails say "Rails battle tested". Hulk also battle tested!!
-Hulk see Rails have thing called "Action mailbox". Hulk like action!! Hulk need mailbox!
-Hulk think Ruby on Rails make good coding friend.
+- Rails say it "one person framework". Hulk like working alone!!
+- Nerd writing Rails say "Rails battle tested". Hulk also battle tested!!
+- Hulk see Rails have thing called "Action mailbox". Hulk like action!! Hulk need mailbox!
+- Hulk think Ruby on Rails make good coding friend.
 
 Hulk pick Ruby on Rails!!!!
 
