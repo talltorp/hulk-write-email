@@ -27,7 +27,18 @@
     <% end %>
   </head>
 
-  <body class="bg-black">
+  <body class="
+    bg-black
+    [--slant-width:400px] 
+    [--hulk-width:360px]
+    [--hulk-margin:90px]
+    sm:[--slant-width:600px] 
+    sm:[--hulk-width:540px]
+    sm:[--hulk-margin:180px]
+    lg:[--slant-width:1000px]
+    lg:[--hulk-width:900px]
+    lg:[--hulk-margin:350px]
+  ">
     <main class="mx-auto flex flex-col">
       <%= yield %>
     </main>
