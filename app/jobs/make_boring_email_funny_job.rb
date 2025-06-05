@@ -19,6 +19,8 @@ class MakeBoringEmailFunnyJob < AiJobBase
   end
 
   def reference_to_funny_event
+    return Hulk.first_reference
+
     return Hulk.first_reference if first_email_for_puny_human?
 
     ((rand(3) == 2) ? Hulk.first_reference : Hulk.other_references.sample)
