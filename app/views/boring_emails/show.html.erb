@@ -1,0 +1,45 @@
+<article class="flex flex-col mx-auto mt-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 mx-auto gap-12 pl-2">
+    <div class="paper -rotate-1">
+      <div class="paper-content h-full text-[10px] sm:text-[12px]">
+        <div>
+          Subject: <%= @boring_email.subject %><br><br>
+          <%= @boring_email.body.gsub("\n", "<br>").html_safe %>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-end md:items-start px-8">
+      <div class="w-full flex justify-end">
+        <img src="/hulk-think-write-email.png" class="w-1/2 scale-x-[-1] mr-10 md:mr-14">
+      </div>
+
+      <div class="bg-[#B3CBAE]
+        relative
+        flex 
+        flex-col 
+        font-hand
+        text-md
+        sm:text-lg
+        lg:text-xl
+        rounded-xl
+        p-4
+        mr-8
+        !leading-none
+        pt-8
+      ">
+        <div class="absolute -top-[75px] -left-[10px] sm:-top-[90px] sm:-left-[10px] xl:-top-[120px] xl:-left-[27px] ">
+          <img src="/think-bubbles-left.png" class="w-[200px] sm:w-[250px] xl:w-auto">
+        </div>
+
+        <div class="absolute -top-[10px] -right-[5px] sm:-top-[20px] sm:-right-[10px] ">
+          <img src="/think-bubbles-right.png" class="w-[100px] sm:w-[150px] xl:w-auto">
+        </div>
+
+        <p class="p-6 z-10">
+          <%= @boring_email.funny_body.gsub("\n", "<br>").html_safe %>
+        </p>
+      </div>
+    </div>
+  </div>
+</article>

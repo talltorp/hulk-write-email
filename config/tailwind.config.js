@@ -31,6 +31,9 @@ module.exports = {
       animation: {
         shake: 'shake 1s cubic-bezier(.36,.07,.19,.97) both',
       },
+      colors: {
+        'hulk-green': '#c0c75a',
+      },
     },
   },
   plugins: [
