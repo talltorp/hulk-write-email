@@ -12,4 +12,9 @@ class GettingStartedMailerPreview < ActionMailer::Preview
     GettingStartedMailer.ask_approval(puny_human.email, "http://localhost:3000/puny_human_approvals/strange-id")
   end
 
+  def typing_done
+    boring_email = BoringEmail.last
+    GettingStartedMailer.with(boring_email:).typing_done
+  end
+
 end

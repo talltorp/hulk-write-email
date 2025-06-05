@@ -1,5 +1,8 @@
 <%= @greeting %>
 
+<%= link_to "Read Hulk's thoughts", boring_email_url(@boring_email.to_signed_global_id.to_s) %>
+
+
 ## What Hulk think when typing tiny keys
 
 <%= @boring_email.funny_body %>
