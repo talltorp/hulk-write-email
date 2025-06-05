@@ -9,7 +9,7 @@ class MakeBoringEmailFunnyJob < AiJobBase
 
     GettingStartedMailer.with(boring_email: boring_email)
       .typing_done
-      .deliver_later(wait_until: 5.minutes.from_now)
+      .deliver_later(wait_until: 30.seconds.from_now)
   end
 
   private
