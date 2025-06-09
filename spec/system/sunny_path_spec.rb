@@ -30,16 +30,16 @@ RSpec.describe "SunnyPath", type: :system do
     open_email('test@example.com')
     expect(current_email).not_to have_content("how easy it works")
 
-    current_email.click_link "Approve"
+    current_email.click_link "You smash link to say you want to be a good email friend"
 
-    expect(page).to have_text "Hulk approve you!"
+    expect(page).to have_text "Hulk have new email friend!"
 
     perform_enqueued_jobs
 
     open_email('test@example.com')
 
     expect(current_email).to have_content("hulk@hulkwriteemail.com")
-    expect(current_email).to have_content("how easy it works")
+    expect(current_email).to have_content("HELLO EMAIL FRIEND!")
     
     # Send an email now and see that we get a response
     stub_open_ai
