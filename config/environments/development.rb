@@ -11,6 +11,7 @@ Rails.application.configure do
   config.active_job.queue_adapter = :good_job
 
   config.hosts << /.*.loca.lt/
+  config.hosts << /.*\.ngrok-free\.app/
 
   # Do not eager load code on boot.
   config.eager_load = false

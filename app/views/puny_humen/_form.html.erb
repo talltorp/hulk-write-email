@@ -32,11 +32,18 @@
     </svg>
 
   </p>
-  <%= simple_form_for puny_human do |form| %>
+  <%= simple_form_for puny_human, html: { class: "block sm:w-[400px]" } do |form| %>
       <%= form.input :email,
         label_html: { class: "sr-only" },
         placeholder: "Your puny human email",
         input_html: { class: "rounded-md border-gray-800 border shadow-sm w-full py-3 px-5" } %>
+
+      <div 
+        class="cf-turnstile mt-4" 
+        data-sitekey="<%= ENV.fetch("TURNSTILE_SITE_KEY") %>"
+        data-size="flexible"
+        data-theme="light"></div>
+
       <%= form.submit "Smash to send!",
         class: "button-lg w-full mt-6 !bg-lime-300" %>
   <% end %>

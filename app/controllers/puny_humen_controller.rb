@@ -1,4 +1,6 @@
 class PunyHumenController < ApplicationController
+  before_action :verify_turnstile, only: [:create]
+
   def create
     @puny_human = PunyHuman.new(puny_human_params)
 
@@ -23,5 +25,14 @@ class PunyHumenController < ApplicationController
 
   def puny_human_params
     params.require(:puny_human).permit(:email)
+  end
+
+  def verify_turnstile
+    turnstile_token = params["cf-turnstile-response"]
+    is_valid = TurnstileVerifier.new(turnstile_token, request.remote_ip).verify
+  
+    return if is_valid
+    flash[:alert] = "Please complete the turnstile challenge."
+    render :new, status: :unprocessable_entity
   end
 end
